@@ -92,7 +92,7 @@
         $("#jsonOutput").text(JSON.stringify(cart, null, 2)).css('color', 'white'); // Dayon M "Changed text color to white"
     }
 
-    // Add Product to Cart
+    // Ali ALmalky
     $("#addProductBtn").click(function () {
         let productName = $("#productNameInput").val().trim();
         if (productName) {
@@ -108,7 +108,7 @@
         }
     });
 
-    // Update Quantity
+    // Ali Almalky
     $(document).on("input", "input[type='number']", function () {
         let index = $(this).data("index");
         let newQuantity = parseInt($(this).val());
@@ -118,14 +118,14 @@
         }
     });
 
-    // Remove Product from Cart
+    // Ali Almalky
     $(document).on("click", ".btn-danger", function () {
         let index = $(this).data("index");
         cart.splice(index, 1);
         updateCartTable();
     });
 
-    // Checkout Button
+    // Ali Almalky
     $("#checkoutBtn").click(function () {
         alert("Checkout: " + JSON.stringify(cart));
     });
